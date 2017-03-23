@@ -1,10 +1,9 @@
-
 'use strict';
 
 // Modules
 var gulp = require('gulp');
 
-gulp.task('copy_libs', function () {
+gulp.task('copy_libs', function() {
 
   var source = [
     'node_modules/bootstrap/**/*',
@@ -19,8 +18,10 @@ gulp.task('copy_libs', function () {
 
   var dest = 'themes/default/public/lib';
 
-  return gulp.src(source, { base: 'node_modules' })
-             .pipe(gulp.dest(dest));
+  return gulp.src(source, {
+      base: 'node_modules'
+    })
+    .pipe(gulp.dest(dest));
 
 });
 
